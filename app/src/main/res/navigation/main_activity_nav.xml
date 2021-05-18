@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_activity_nav"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.berin.firstgetir.AnasayfaFragment"
+        android:label="AnasayfaFragment"
+        tools:layout="@layout/fragment_anasayfa">
+        <action
+            android:id="@+id/kategoriDetayGecis"
+            app:destination="@id/detaySayfaFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detaySayfaFragment"
+        android:name="com.berin.firstgetir.DetaySayfaFragment"
+        android:label="fragment_detay_sayfa"
+        tools:layout="@layout/fragment_detay_sayfa" >
+        <argument
+            android:name="nesne"
+            app:argType="com.berin.firstgetir.Kategoriler" />
+    </fragment>
+    <fragment
+        android:id="@+id/aramaFragment"
+        android:name="com.berin.firstgetir.AramaFragment"
+        android:label="fragment_arama"
+        tools:layout="@layout/fragment_arama" />
+    <fragment
+        android:id="@+id/kampanyaFragment"
+        android:name="com.berin.firstgetir.KampanyaFragment"
+        android:label="fragment_kampanya"
+        tools:layout="@layout/fragment_kampanya" />
+    <fragment
+        android:id="@+id/profilFragment"
+        android:name="com.berin.firstgetir.ProfilFragment"
+        android:label="fragment_profil"
+        tools:layout="@layout/fragment_profil" />
+</navigation>
